@@ -12,8 +12,17 @@ function getTask(){
         url: '/task',
         success: function(response){
             console.log('Get Set');
+            $('#allTasks').empty();
+            for (var i = 0; i < response.length; i++) {
+                var task = response[i];
+                var $row = $('<tr></tr>');
+
+                $row.append('<td>' + task + '</td>');
+                $('#allTasks').append($row);
+                
+            }
         }
-    })
+    });
 }
 
 function addTask(){
