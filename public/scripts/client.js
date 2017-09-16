@@ -3,8 +3,8 @@ $(document).ready(onReady);
 function onReady(){
     console.log('giddy up');
     $('#addButton').on('click', addTask);
-    $('#allTasks').on('click', ".deleteButton", deleteTask);
-    $('#allTasks').on('click', ".completeButton", updateTask);
+    $('.container').on('click', ".delete", deleteTask);
+    $('.container').on('click', ".complete", updateTask);
     getTask();
 }
 
@@ -14,21 +14,21 @@ function getTask(){
         url: '/task',
         success: function(response){
             console.log('Get Set');
-            $('#allTasks').empty();
+            $('.container').empty();
             for (var i = 0; i < response.length; i++) {
                 var $row = $('<tr></tr>');
 
                 $row.append('<td>' + response[i].task + '</td>');
                 $row.append('<td>' + response[i].complete + '</td>');
-                $('#allTasks').append($row);
+                $('.container').append($row);
 
-                var $deleteButton = $('<td><button class="deleteButton" data-id="' + response[i].id + '">Delete</button></td>');
+                var $deleteButton = $('<td><button class="delete btn-danger" data-id="' + response[i].id + '">Delete</button></td>');
                 $row.append($deleteButton);
-                $('#allTasks').append($row);
+                $('.container').append($row);
 
-                var $completeButton = $('<td><button class="completeButton" data-id="' + response[i].id +'">Complete</button></td>');
+                var $completeButton = $('<td><button class="complete btn-success" data-id="' + response[i].id +'">Complete</button></td>');
                 $row.append($completeButton);
-                $('#allTasks').append($row);
+                $('.container').append($row);
             }
         }
     });
