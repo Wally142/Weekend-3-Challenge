@@ -14,24 +14,26 @@
 <body>
     <h1>TO DO LIST</h1>
     <main>
-        <div id="inputDiv">
+        <div class="inputDiv">
             <input type ="text" id="taskAdd" placeholder="Task">
-            <button id="addButton">Add</button>
+            <button class="addButton btn-info">Add</button>
         </div>
 
-        <div id="displayTask">
-            <table id="taskList">
+        <div class="displayTask">
+            <table class="taskList">
                 <thead>
                     <th>Task</th>
-                    <th>Delete</th>
-                    <th>Completed</th>
+                    <th id ="tableHeadOne">Delete</th>
+                    <th id ="tableHeadTwo">Complete?</th>
                 </thead>
                 <tbody class="container">
                     
                 </tbody>
             </table>
         </div>
+            <h2>Tasks Completed</h2>
     
+    </div>
     </main>
 </body>
 </html>

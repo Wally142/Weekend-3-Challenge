@@ -2,7 +2,7 @@ $(document).ready(onReady);
 
 function onReady(){
     console.log('giddy up');
-    $('#addButton').on('click', addTask);
+    $('.addButton').on('click', addTask);
     $('.container').on('click', ".delete", deleteTask);
     $('.container').on('click', ".complete", updateTask);
     getTask();

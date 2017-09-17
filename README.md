@@ -8,6 +8,6 @@ Steps remaining
 [X]fix PUT route
 [X]install/source bootstrap and CSS
 [ ]Show task complete via bootstrap and CSS with container switch
-[ ]green putton for complete, red for delete
+[X]green putton for complete, red for delete
 [X]make sure database stores complete or not
 [X]throw database info in sql file
