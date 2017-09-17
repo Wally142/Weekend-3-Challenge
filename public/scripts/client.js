@@ -56,6 +56,10 @@ function addTask(){
 }
 // end addTask function
 function deleteTask(){
+    if (!confirm('Are you sure?')){
+        return false
+        //pro mode, stackoverflow helped on this one
+    }
     var thisId = $(this).data('id');
     console.log('In Delete function');
     $.ajax({
