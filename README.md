@@ -12,4 +12,3 @@ Steps remaining
 [X]throw database info in sql file
 [ ]Hard Mode
 [X]Pro Mode
-[ ]Finish up styling

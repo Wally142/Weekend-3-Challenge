@@ -17,7 +17,7 @@ function getTask(){
             $('.container').empty();
             for (var i = 0; i < response.length; i++) {
                 var $row = $('<tr></tr>');
-
+            
                 $row.append('<td>' + response[i].task + '</td>');
                 $row.append('<td>' + response[i].complete + '</td>');
                 $('.container').append($row);
@@ -29,7 +29,7 @@ function getTask(){
                 var $completeButton = $('<td><button class="complete btn-success" data-id="' + response[i].id +'">Complete</button></td>');
                 $row.append($completeButton);
                 $('.container').append($row);
-            }
+              }
         }
     });
 }
