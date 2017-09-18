@@ -90,6 +90,7 @@ function updateTask(){
         }
     })
 };
+//end update function
 
 // database and DOM do update when click complete button so it does work 
 //but I do feel like I should be using req.body and req.params

@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
         }
     })
 });
-
+// end router GET
 
 router.post('/', function (req, res) {
     console.log('In post route', req.body);
@@ -44,7 +44,7 @@ router.post('/', function (req, res) {
         }
     })
 });
-
+//End router POST
 
 router.delete('/:id', function (req, res) {
     var dbId = req.params.id;
@@ -65,11 +65,11 @@ router.delete('/:id', function (req, res) {
     }
     )
 });
-
+//End router DELETE
 
 router.put('/:id', function (req, res) {
     var update = req.params.id;
-    //var fin = req.body;
+    //var fin = req.body.complete;
     console.log('put complete', update);
     pool.connect(function (conErr, client, done) {
         if (conErr) {
@@ -88,6 +88,6 @@ router.put('/:id', function (req, res) {
     }
     )
 });
-
+//End Router PUT
 
 module.exports = router;
